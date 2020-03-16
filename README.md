@@ -1,6 +1,9 @@
 ## INSTRUCTIONS D'INSTALLATION
-1. git clone
-2. npm install
+1. Cloner l'application depuis GitHub `git clone https://github.com/AxelFontarive/StudLoc.git stud-loc`
+2. Installer les dépendances `npm install`
+3. Démarrer l'application en local `npm start`
+
+_____
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
