@@ -1,7 +1,10 @@
 ## INSTRUCTIONS D'INSTALLATION
-1. Cloner l'application depuis GitHub `git clone https://github.com/AxelFontarive/StudLoc.git stud-loc`
-2. Installer les dépendances `npm install`
-3. Démarrer l'application en local `npm start`
+1. Créer un dossier dans lequel le projet sera stocké
+2. Ouvrir CMD, naviguer jusqu'à ce dossier grâce à la commande `cd`
+3. Cloner l'application depuis GitHub `git clone https://github.com/AxelFontarive/StudLoc.git stud-loc`
+4. Naviguer vers le dossier créé `cd .\stud-loc\`
+5. Installer les dépendances `npm install`. Ceci prendra quelques minutes.
+6. Démarrer l'application en local `npm start`
 
 _____
 
