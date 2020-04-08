@@ -2,7 +2,7 @@ const firebase = require("firebase");
 require("firebase/firestore");
 
 firebase.initializeApp({
-  apiKey : 'AIzaSyDTH7irET9rJsD5LR03QNlKlNjEY0Py8t8',
+  apiKey : process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain : 'eur3',
   projectId : 'stud-loc'
 });
