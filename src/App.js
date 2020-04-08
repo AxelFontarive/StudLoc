@@ -8,6 +8,8 @@ import {
 
 import logo from './logo.svg';
 import './css/top-bar.css';
+import Recherche from './pages/Recherche';
+import Profil from './pages/Profil';
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
           <Link className="link-big" to="/">StudLoc</Link>
           <Link className="link" to="/recherche">Rechercher</Link> |
           <Link className="link" to="/logements">Logements</Link> |
+          <Link className="link" to="/profil">Profil</Link> |
           <Link className="link" to="/apropos">À propos</Link>
         </div>
       </div>
@@ -30,9 +33,7 @@ function App() {
           </div>
         </Route>
         <Route path="/recherche">
-          <div>
-            <h2>Remplacer par un Component React : Recherche</h2>
-          </div>
+            <Recherche></Recherche>
         </Route>
         <Route path="/logements">
           <div>
@@ -44,6 +45,9 @@ function App() {
           <div>
             <h2>Remplacer par un Component React : À Propos</h2>
           </div>
+        </Route>
+        <Route path="/profil">
+            <Profil></Profil>
         </Route>
       </Switch>
     </Router>
