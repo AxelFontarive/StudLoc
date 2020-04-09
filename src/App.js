@@ -10,6 +10,8 @@ import logo from './logo.svg';
 import './css/top-bar.css';
 import Recherche from './pages/Recherche';
 import Profil from './pages/Profil';
+import Login from './pages/auth/login';
+import Logout from './pages/auth/logout';
 
 function App() {
   return (
@@ -50,6 +52,12 @@ function App() {
         </Route>
         <Route path="/profil">
             <Profil></Profil>
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/logout">
+          <Logout />
         </Route>
       </Switch>
     </Router>
