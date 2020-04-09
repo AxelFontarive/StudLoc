@@ -20,8 +20,10 @@ function App() {
           <Link className="link-big" to="/">StudLoc</Link>
           <Link className="link" to="/recherche">Rechercher</Link> |
           <Link className="link" to="/logements">Logements</Link> |
-          <Link className="link" to="/profil">Profil</Link> |
           <Link className="link" to="/apropos">À propos</Link>
+          <div id="profile-container">
+            <Link className="link" to="/login">Connexion</Link>
+          </div>
         </div>
       </div>
       
