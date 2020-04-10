@@ -9,8 +9,8 @@ a[href*="intent"] {
 }
 
 .rating {
-    width: 226px;
-    margin: 0 auto 1em;
+    width: 200px;
+    margin: 0 0 1em;
     font-size: 45px;
     overflow:hidden;
 }
