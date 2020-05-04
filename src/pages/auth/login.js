@@ -1,11 +1,22 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { firebase } from '../../js/database';
+import { DbUtils } from '../../js/utils';
+import { Auth } from '../../js/authentication'
 
 export default function Login() {
+  var history = useHistory();
+
   const [loginState, setLoginState] = useState({
     email : undefined,
     password : undefined,
   });
+
+  const [error, setError] = useState(null);
+  const errorCodes = {
+    "auth/user-not-found" : "Utilisateur non trouvé.",
+    "auth/wrong-password" : "Mot de passe incorrect."
+  }
 
   function fieldChangedEventHandler(event) {
     const name = event.target.name;
@@ -18,7 +29,25 @@ export default function Login() {
 
   function onSubmitEventHandler(event) {
     event.preventDefault();
-    // TODO : Ajouter une instruction de connexion Firebase.
+    
+    // Authentification Firebase
+    firebase.auth().signInWithEmailAndPassword(loginState.email, loginState.password).then(() => {
+      console.log("Logged in !");
+
+      // Ajout des infos utilisateurs (prises dans la DB) dans la classe Auth.
+      DbUtils.getUserByAuthUid(firebase.auth().currentUser.uid).then(u => {
+        Auth.currentUser = u;
+        Auth.isUserConnected = true;
+
+        console.log(Auth.currentUser);
+        history.push('/');
+      });
+
+    }).catch(err => {
+      console.error("Failed to log in !")
+      console.error(err);
+      setError(errorCodes[err.code] || "Une erreur s'est produite. Veuillez réessayer plus tard.");
+    })
   }
 
   return (
@@ -37,6 +66,7 @@ export default function Login() {
             </div>
 
             <input type="submit"/>
+              {error != null ? <p>Erreur ! {error}</p> : <p></p>}
           </form>
         </div>
       </div>

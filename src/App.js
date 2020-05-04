@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,6 +6,9 @@ import {
   Link
 } from "react-router-dom";
 
+import { firebase } from './js/database';
+import { Auth } from './js/authentication';
+import { DbUtils } from './js/utils';
 import logo from './logo.svg';
 import './css/top-bar.css';
 import Recherche from './pages/Recherche';
@@ -14,6 +17,29 @@ import Login from './pages/auth/login';
 import Logout from './pages/auth/logout';
 
 function App() {
+  const [connected, setConnected] = useState(false);
+
+  function listenForAuthChanges() {
+    // Ajout d'un listener pour reconnecter l'utilisateur si la page est rechargée.
+    firebase.auth().onAuthStateChanged(usr => {
+      if (usr) {
+        DbUtils.getUserByAuthUid(firebase.auth().currentUser.uid).then(u => {
+          Auth.currentUser = u;
+          Auth.isUserConnected = true;
+  
+          console.log(Auth.currentUser);
+          setConnected(true);
+        });
+      } else {
+        setConnected(false);
+      }
+    })
+  }
+
+  useEffect(() => {
+    listenForAuthChanges();
+  }, []);
+
   return (
     <Router>
       <div id="top-bar">
@@ -24,7 +50,14 @@ function App() {
           <Link className="link" to="/logements">Logements</Link> |
           <Link className="link" to="/apropos">À propos</Link>
           <div id="profile-container">
-            <Link className="link" to="/login">Connexion</Link>
+            {connected ? (
+              <>
+                <Link className="link" to="/logout">Déconnexion</Link>
+                <Link className="link" to="/profil">Profil</Link>
+              </>
+            ) : (
+              <Link className="link" to="/login">Connexion</Link>
+            )}
           </div>
         </div>
       </div>
@@ -51,7 +84,7 @@ function App() {
           </div>
         </Route>
         <Route path="/profil">
-            <Profil></Profil>
+            <Profil/>
         </Route>
         <Route path="/login">
           <Login />
