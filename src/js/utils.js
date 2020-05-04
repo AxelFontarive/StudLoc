@@ -1,4 +1,4 @@
-import db from "./database";
+import {db} from "./database";
 
 /**
  * Fournit des méthodes permettant un accès facilité à la base de données.
