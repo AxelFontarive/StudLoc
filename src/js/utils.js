@@ -76,7 +76,12 @@ export class CodeUtils {
      * @param {firebase.firestore.Timestamp} firestoreDate Timestamp Firestore à convertir.
      */
     static toShortDate(firestoreDate) {
+        if (!firestoreDate) {
+            return '';
+        }
         var dfb = firestoreDate.toDate();
-        return `${dfb.getFullYear()}-${dfb.getMonth() + 1}-${dfb.getDate()}`;
+
+        var month = (dfb.getMonth() + 1).toString();
+        return `${dfb.getDate()}/${month.length !== 2 ? '0' + month : month}/${dfb.getFullYear()}`;
     }
 }

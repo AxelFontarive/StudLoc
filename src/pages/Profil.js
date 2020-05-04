@@ -3,6 +3,8 @@ import '../css/profil.css';
 import { Auth } from '../js/authentication';
 import { useHistory } from 'react-router-dom';
 
+import { CodeUtils } from "../js/utils";
+
 function Profil(){
     var history = useHistory();
 
@@ -25,7 +27,12 @@ function Profil(){
                 <span>
                     <h2 className="username">{user.Nom} {user.Prenom}</h2>
                 </span>
-                <span id="role">{user.Role}</span>
+                <span id="role" className={user.Role}>{user.Role}</span>
+            </div>
+            <div className="details-wrapper">
+                <p>Adresse mail : {user.Email}</p>
+                <p>Date de naissance : {CodeUtils.toShortDate(user.DateNaissance)}</p>
+                <p>Adresse : {user.Rue}, {user.CP} {user.Ville}</p>
             </div>
         </div>
     )

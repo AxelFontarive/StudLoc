@@ -19,6 +19,17 @@
     font-weight: bold;
 
     color: white;
-    background-color: rgb(255, 64, 0);
     border-radius: 5px;
+}
+
+.ADMINISTRATEUR {
+    background-color: rgb(255, 64, 0);
+}
+
+.PROPRIETAIRE {
+    background-color: rgb(0, 64, 255);
+}
+
+.LOCATAIRE {
+    background-color: rgb(255, 0, 64);
 }
