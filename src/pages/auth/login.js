@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { firebase } from '../../js/database';
 import { DbUtils } from '../../js/utils';
 import { Auth } from '../../js/authentication'
+import '../../css/authentification.css';
 
 export default function Login() {
   var history = useHistory();
