@@ -17,6 +17,7 @@ import Login from './pages/auth/login';
 import Logout from './pages/auth/logout';
 import ListeLogement from './pages/logement/listeLogement';
 import Logement from './pages/logement/logement';
+import NotFound from './pages/notfound';
 
 
 function App() {
@@ -95,6 +96,9 @@ function App() {
           <Logout />
         </Route>
         <Route path="/logements/:logementId" children={<Logement/>}></Route>
+        <Route path="/notfound">
+          <NotFound/>
+        </Route>
       </Switch>
     </Router>
   );
