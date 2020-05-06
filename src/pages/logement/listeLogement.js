@@ -14,7 +14,7 @@ function ListeLogement(){
     return (
         <div>
             {listeLogement.map(l => (
-                <ItemLogement key={l.Number + l.Test} {...l}/>
+                <ItemLogement key={l.ID} {...l}/>
             ))}
         </div>
     );
