@@ -1,9 +1,10 @@
 import React from 'react'
 
-function ItemLogement(){
+function ItemLogement(props) {
     return (
         <div>
-            azertyuiop
+            {props.Number}
+            {props.Test}
         </div>
     )
 }
