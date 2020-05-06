@@ -15,6 +15,8 @@ import Recherche from './pages/Recherche';
 import Profil from './pages/Profil';
 import Login from './pages/auth/login';
 import Logout from './pages/auth/logout';
+import ListeLogement from './pages/logement/listeLogement';
+
 
 function App() {
   const [connected, setConnected] = useState(false);
@@ -73,10 +75,9 @@ function App() {
             <Recherche></Recherche>
         </Route>
         <Route path="/logements">
-          <div>
-            <h2>Remplacer par un Component React : Liste des logements</h2>
-            À placer dans <i>src/pages/logement</i>.
-          </div>
+          <ListeLogement>
+
+          </ListeLogement>
         </Route>
         <Route path="/apropos">
           <div>
