@@ -1,15 +1,21 @@
+
+body{
+    background-color: rgb(205, 228, 235);
+}
+
 .username-wrapper {
     vertical-align: middle;
     margin: 5px;
 }
 
-
-.username-wrapper span {
-    margin-right: 10px;
-    display: inline-block;
+.details-wrapper{
     vertical-align: middle;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 20%;
+    background-color: rgb(255, 255, 255);
 }
-
 #role {
     padding: 2px;
     padding-left: 5px;
@@ -31,5 +37,12 @@
 }
 
 .LOCATAIRE {
-    background-color: rgb(255, 0, 64);
+    background-color: rgb(35, 145, 45);
+}
+
+.username-wrapper span {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../css/rechercher.css';
 function Recherche(){
     return(
         <div>
