@@ -16,6 +16,7 @@ import Profil from './pages/Profil';
 import Login from './pages/auth/login';
 import Logout from './pages/auth/logout';
 import ListeLogement from './pages/logement/listeLogement';
+import Logement from './pages/logement/logement';
 
 
 function App() {
@@ -74,7 +75,7 @@ function App() {
         <Route path="/recherche">
             <Recherche></Recherche>
         </Route>
-        <Route path="/logements">
+        <Route path="/logements" exact>
           <ListeLogement>
 
           </ListeLogement>
@@ -93,6 +94,7 @@ function App() {
         <Route path="/logout">
           <Logout />
         </Route>
+        <Route path="/logements/:logementId" children={<Logement/>}></Route>
       </Switch>
     </Router>
   );

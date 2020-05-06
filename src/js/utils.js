@@ -21,6 +21,10 @@ export class DbUtils {
      */
     static async getUserByAuthUid(uid) {
         let snapshot = await db.collection("User").where("AuthUID", "==", uid).get();
+        if (!snapshot.docs[0]) {
+            return undefined;
+        }
+
         return snapshot.docs[0].data();
     }
 
@@ -32,6 +36,10 @@ export class DbUtils {
      */
     static async getDocumentById(collection, id) {
         let snapshot = await db.collection(collection).where("ID", "==", id).get();
+        if (!snapshot.docs[0]) {
+            return undefined;
+        }
+        
         return snapshot.docs[0].data();
     }
 
