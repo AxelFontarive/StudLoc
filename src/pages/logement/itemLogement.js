@@ -10,7 +10,7 @@ function ItemLogement(props) {
         history.push("/logements/"+props.ID)
     }
     return (
-        <div>
+        <div className="item-container">
             <div className="details-wrapper">
                 <h3 onClick={onTitleClick}>
                     {props.Nom}

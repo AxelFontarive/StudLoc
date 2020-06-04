@@ -1,8 +1,7 @@
 body{
     background-color: rgb(205, 228, 235);
 }
-.details-wrapper{
-    width: 100%;
+.item-container{
     vertical-align: middle;
     margin: 10px;
     border-radius: 10px;
