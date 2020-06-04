@@ -11,7 +11,7 @@ function ItemLogement(props) {
     }
     return (
         <div className="item-container">
-            <div className="details-wrapper">
+            <div className="item-details-wrapper">
                 <h3 onClick={onTitleClick}>
                     {props.Nom}
                 </h3>
