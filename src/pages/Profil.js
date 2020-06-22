@@ -4,6 +4,7 @@ import { Auth } from '../js/authentication';
 import { useHistory } from 'react-router-dom';
 
 import { CodeUtils } from "../js/utils";
+import ListeReservation from './reservation/listeReservation';
 
 function Profil(){
     var history = useHistory();
@@ -33,6 +34,12 @@ function Profil(){
                 <p>Adresse mail : {user.Email}</p>
                 <p>Date de naissance : {CodeUtils.toShortDate(user.DateNaissance)}</p>
                 <p>Adresse : {user.Rue}, {user.CP} {user.Ville}</p>
+            </div>
+            <div className="resa-wrapper">
+                <h3>Vos réservations</h3>
+                <div className="resa-list-wrapper">
+                    <ListeReservation key={user.ID} user={user}/>
+                </div>
             </div>
         </div>
     )

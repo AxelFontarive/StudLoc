@@ -13,7 +13,7 @@ function ItemLogement(props) {
         <div className="item-container">
             <div className="item-details-wrapper">
                 <h3 onClick={onTitleClick}>
-                    {props.Nom}
+                    {props.Nom} ({props.Type})
                 </h3>
                 <p>À {props.Ville}</p>
                 <p>{props.Note}/5</p>

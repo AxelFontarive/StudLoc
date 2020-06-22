@@ -18,6 +18,7 @@ import Logout from './pages/auth/logout';
 import ListeLogement from './pages/logement/listeLogement';
 import Logement from './pages/logement/logement';
 import NotFound from './pages/notfound';
+import Reservation from './pages/reservation/reservation';
 
 
 function App() {
@@ -95,7 +96,10 @@ function App() {
         <Route path="/logout">
           <Logout />
         </Route>
-        <Route path="/logements/:logementId" children={<Logement/>}></Route>
+        <Route path="/logements/:logementId" children={<Logement/>} exact></Route>
+        <Route path="/logements/:logementId/reservation" exact>
+          <Reservation/>
+        </Route>
         <Route path="/notfound">
           <NotFound/>
         </Route>
