@@ -26,7 +26,7 @@ function Logement(){
         <div>
             <div className="title-wrapper">
                 <h2>{logement.Nom}</h2>
-                {Auth.isUserConnected ? <Link to={"/logements/" + logementId + '/reservation'}>Réserver</Link> : <p>Connectez vous pour réserver.</p>}
+                {Auth.isUserConnected ? <Link to={"/logements/" + logementId + '/reservation'}>Réserver</Link> : <p><Link to="/login">Connectez-vous</Link> pour réserver.</p>}
                 
             </div>
             <div className="description-wrapper">
