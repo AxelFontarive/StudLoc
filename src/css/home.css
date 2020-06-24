@@ -1,0 +1,87 @@
+#gauche{
+	float: left;
+	width: 27%;
+	text-align: center;
+	margin-left: 6%;
+}
+
+#centre{
+	float: left;
+	width: 27%;
+	text-align: center;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+#droite{
+	float: left;
+	width: 27%;
+	text-align: center;
+	margin-right: 6%;
+}
+
+.BordureDiv{
+	border: 0.15px solid black;
+	background-color: rgba(10,0,104);
+	color: white;
+	border-radius: 10px;
+
+}
+
+section{
+	float: right;
+	width: 100%;
+}
+
+#ImageHome1{
+	background-image: url("../images/Home2.png");
+	background-repeat:no-repeat;
+	background-position:right;
+	width: 96%;
+	height: 300px;
+	margin: 2%;
+	border: 0.15px solid white;
+	border-radius: 10px;
+}
+
+#ImageHome2{
+	background-image: url("../images/Home1.png");
+	background-repeat:no-repeat;
+	background-position:right;
+	width: 96%;
+	height: 300px;
+	margin: 2%;
+	border: 0.15px solid white;
+	border-radius: 10px;
+}
+
+
+#ImageHome3{
+	background-image: url("../images/Home3.png");
+	background-repeat:no-repeat;
+	background-position:center center;
+	width: 96%;
+	height: 300px;
+	margin: 2%;
+	border: 0.15px solid white;
+	border-radius: 10px;
+}
+
+
+body{
+	background-color: rgba(205,228,235);
+}
+
+#TitreHome{
+	text-align: center;
+}
+
+.SousTitre{
+	border: 1px solid white;
+	background-color: white;
+	color: black;
+	margin-right: 25%;
+	margin-left: 25%;
+	border-radius: 15px;
+	font-size: 20px;
+}

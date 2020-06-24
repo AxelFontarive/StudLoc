@@ -19,6 +19,7 @@ import ListeLogement from './pages/logement/listeLogement';
 import Logement from './pages/logement/logement';
 import NotFound from './pages/notfound';
 import Reservation from './pages/reservation/reservation';
+import Home from './pages/Home';
 
 
 function App() {
@@ -69,10 +70,7 @@ function App() {
       
       <Switch>
         <Route path="/" exact>
-          <div>
-            <h2>Remplacer par un Component React : Home</h2>
-            À placer dans <i>src/pages/home</i>.
-          </div>
+          <Home></Home>
         </Route>
         <Route path="/recherche">
             <Recherche></Recherche>
