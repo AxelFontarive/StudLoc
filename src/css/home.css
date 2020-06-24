@@ -47,7 +47,7 @@ section{
 #ImageHome2{
 	background-image: url("../images/Home1.png");
 	background-repeat:no-repeat;
-	background-position:right;
+	background-position:center;
 	width: 96%;
 	height: 300px;
 	margin: 2%;
