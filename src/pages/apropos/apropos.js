@@ -55,7 +55,7 @@ function Apropos() {
                 </tbody>
             </table>
             <br/><br/><br/>
-            <h1>Nous remerçions :</h1>
+            <h1>Nous remercions :</h1>
             <table id="TableAide">
                 <tbody>
                     <tr>
@@ -99,9 +99,9 @@ function Apropos() {
             
             <footer>
                 <div id="DivFooter1">
-                    <p id="Version">V1.0.5</p>
+                    <p id="Version">V1.5</p>
                 </div>
-                <div id="DivFooter2">&copy Tétras CPINFO19</div>
+                <div id="DivFooter2">Tétras CPINFO19</div>
             </footer>
         </div>
     )
