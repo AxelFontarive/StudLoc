@@ -20,7 +20,7 @@ import Logement from './pages/logement/logement';
 import NotFound from './pages/notfound';
 import Reservation from './pages/reservation/reservation';
 import Home from './pages/Home';
-
+import Apropos from './pages/apropos/apropos';
 
 function App() {
   const [connected, setConnected] = useState(false);
@@ -81,9 +81,7 @@ function App() {
           </ListeLogement>
         </Route>
         <Route path="/apropos">
-          <div>
-            <h2>Remplacer par un Component React : À Propos</h2>
-          </div>
+          <Apropos/>
         </Route>
         <Route path="/profil">
             <Profil/>
